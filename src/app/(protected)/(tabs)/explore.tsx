@@ -6,7 +6,7 @@ export default function TabTwoScreen() {
 
   return (
     <TouchableOpacity onPress={signOut}>
-      <Text>hey</Text>
+      <Text>Sign Out</Text>
     </TouchableOpacity>
   );
 }

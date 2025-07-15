@@ -1,5 +1,5 @@
 import { useMutation } from "@tanstack/react-query";
-import firebaseSignUp from "../../api/auth/firebaseSignUp";
+import firebaseSignUp from "../../../api/auth/firebaseSignUp";
 
 const useSignUp = () => {
   return useMutation({

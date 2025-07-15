@@ -7,12 +7,10 @@ import {
   useState,
 } from "react";
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import useSignIn from "../hooks/api/useSignIn";
-import useSignUp from "../hooks/api/useSignUp";
-import useCreateUser from "../hooks/api/useCreateUser";
-import {
-  sendEmailVerification
-} from "firebase/auth";
+import useSignIn from "../hooks/api/auth/useSignIn";
+import useSignUp from "../hooks/api/auth/useSignUp";
+import useCreateUser from "../hooks/api/auth/useCreateUser";
+import { sendEmailVerification } from "firebase/auth";
 
 SplashScreen.preventAutoHideAsync();
 

@@ -1,5 +1,5 @@
 import { useMutation } from "@tanstack/react-query";
-import createUser from "../../api/auth/createUser";
+import createUser from "../../../api/auth/createUser";
 
 const useCreateUser = () => {
   return useMutation({
