@@ -1,8 +1,8 @@
-import AsyncStorage from "@react-native-async-storage/async-storage";
+import { auth } from "../clients/firebase";
 
 const getToken = async () => {
   try {
-    const token = await AsyncStorage.getItem("auth_token");
+    const token = await auth.currentUser.getIdToken()
     return token;
   } catch (error) {
     console.error("Failed to retrieve token", error);

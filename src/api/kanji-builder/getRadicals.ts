@@ -9,7 +9,7 @@ export interface Radical {
 const getRadicals = async () => {
   try {
     console.log("fetching radicals");
-    const endpoint = "kanji-builder/radicals";
+    const endpoint = "/kanji-builder/radicals";
     const response = await api.get<Radical[]>(endpoint);
     return response.data;
   } catch (error: unknown) {

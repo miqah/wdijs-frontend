@@ -1,3 +1,4 @@
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { Tabs } from "expo-router";
 import React from "react";
 import { Platform, Text, View } from "react-native";
@@ -5,12 +6,10 @@ export default function TabLayout() {
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: "01010101",
+        tabBarActiveTintColor: "#baa1cc",
         headerShown: false,
         tabBarStyle: Platform.select({
-          ios: {
-            position: "absolute",
-          },
+          ios: {},
           default: {},
         }),
       }}
@@ -19,10 +18,12 @@ export default function TabLayout() {
         name="index"
         options={{
           title: "Home",
-          tabBarIcon: ({ color }) => (
-            <View>
-              <Text>Home</Text>
-            </View>
+          tabBarIcon: () => (
+            <MaterialCommunityIcons
+              name="robot-excited"
+              color="	#c9b4d8"
+              size={24}
+            />
           ),
         }}
       />
@@ -30,7 +31,7 @@ export default function TabLayout() {
         name="builder"
         options={{
           title: "Builder",
-          tabBarIcon: ({ color }) => (
+          tabBarIcon: () => (
             <View>
               <Text>Builder</Text>
             </View>
@@ -41,7 +42,7 @@ export default function TabLayout() {
         name="explore"
         options={{
           title: "Explore",
-          tabBarIcon: ({ color }) => (
+          tabBarIcon: () => (
             <View>
               <Text>Practice</Text>
             </View>

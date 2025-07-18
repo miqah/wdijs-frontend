@@ -1,7 +1,7 @@
 import { Text, TouchableOpacity } from "react-native";
 import { useAuth } from "../../../context/authContext";
 
-export default function TabTwoScreen() {
+export default function ExploreScreen() {
   const { signOut } = useAuth();
 
   return (
